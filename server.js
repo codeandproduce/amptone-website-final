@@ -9,10 +9,6 @@ hbs.registerPartials(__dirname+'/views/partials');
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'hbs');
 
-hbs.registerHelper('athome', () => {
-  return new Date().getFullYear();
-});
-
 app.get('/', (req, res) => {
   res.render('index.hbs',{
     athome: true
