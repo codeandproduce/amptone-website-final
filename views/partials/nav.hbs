@@ -36,12 +36,12 @@
 						<h1>SUBSCRIBE</h1>
 						<div class="line"></div>
 					</div>
-					<div class="subscribe-contain">
+					<form class="subscribe-contain" action="/" method="post" id="emailSubscriptionForm">
 						<ol>
 							<li><p>Subscribe to be the first to know for new releases and events. <span class="wrong">Please fill out the correct information</span></p></li>
-							<li><input placeholder="myemail@amptone.com" type="email"></li>
+							<li><input id="emailInput" placeholder="myemail@amptone.com" type="email"></li>
 							<li class="termsLI"><a href="#">TERMS</a></li>
-							<li class="buttonLI"><button>SUBMIT</button></li>
+							<li class="buttonLI"><button id="submit" type="submit">SUBMIT</button></li>
 						</ol>
 					</div>
 				</div>
@@ -65,3 +65,4 @@
 		</div>
 		<div id="animateStu">
 		</div>
+		<script src="./scripts/build.js"></script>
