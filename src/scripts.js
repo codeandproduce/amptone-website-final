@@ -9,7 +9,7 @@ $('#emailSubscriptionForm').submit((event) => {
   var userEmail = $("#emailInput").val();
   console.log(userEmail);
   $.ajax({
-    url: '/',
+    url: '/subscribe',
     type: 'POST',
     data: {
       email:userEmail

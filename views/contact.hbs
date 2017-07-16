@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/shared.css">
+		<link rel="stylesheet" href="css/toggle.css">
+		<link rel="stylesheet" href="css/standard.css">
+		<link rel="stylesheet" href="css/contact.css">
+
+	</head>
+	<body>
+		{{>nav}}
+		<div class="menu-background" style="background-image:url('img/bruh.jpg')">
+			<h1>Contact us</h1>
+			<div class="tint"></div>
+			<!--specific to artists-->
+
+		</div>
+		<!-- // Fancy background photo -->
+
+		<!-- Contacts specific -->
+		<div class="container">
+			<div class="contacts-contain">
+				<h1>Ask us anything!</h1>
+				<div class="row">
+					<div class="col-md-8">
+						<form>
+							<input class="text-input" type="text" placeholder="Your name">
+							<input class="text-input" type="text" placeholder="youremail@amptone.com">
+							<input class="text-input" type="text" placeholder="Why are you contacting us?">
+							<h4>Your message</h4>
+							<textarea rows="6" class="text-input" placeholder="What do you want to say to us?"></textarea>
+							<button class="submit-button">Submit</button>
+						</form>
+					</div>
+					<div class="col-md-4">
+						<form>
+						<div class="email-contact">
+							<h3>Alternatively, you could contact us through our email!</h3>
+							<a href="mailto:contact@amptonerecords.com">contact@amptonerecords.com</a>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // -->
+
+		{{> footer}}
+		<script src="scripts/jquery-3.2.1.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script
+  src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"
+  integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE="
+  crossorigin="anonymous"></script>
+  		<script src="scripts/jq.js"></script>
+  		<script src="scripts/artists-jq.js"></script>
+
+	</body>
+</html>

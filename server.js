@@ -40,11 +40,13 @@ app.get('/releases', (req, res) => {
   });
 });
 
-//SUBSCRIPTION
-app.post('/', (req, res) => {
-  addEmailToMailchimp(req.body.email);
-  console.log(req.body.email);
-});
+
+app.get('/contact', (req, res) => {
+  res.render('contact.hbs', {
+    atcontact: true
+  })
+})
+
 
 function addEmailToMailchimp(email) {
 

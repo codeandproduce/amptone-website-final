@@ -27,7 +27,7 @@
 							<li><a class="{{#if atrelease}}active{{/if}}" href="/releases">RELEASES</a></li>
 							<li><a class="{{#if atevent}}active{{/if}}" href="/events">EVENTS</a></li>
 							<li><a href="#">MERCH</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a class="{{#if atcontact}}active{{/if}} "href="/contact">CONTACT</a></li>
 						</uo>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 						<h1>SUBSCRIBE</h1>
 						<div class="line"></div>
 					</div>
-					<form class="subscribe-contain" action="/" method="post" id="emailSubscriptionForm">
+					<form class="subscribe-contain" action="/subscribe" method="post" id="emailSubscriptionForm">
 						<ol>
 							<li><p>Subscribe to be the first to know for new releases and events. <span class="wrong">Please fill out the correct information</span></p></li>
 							<li><input id="emailInput" placeholder="myemail@amptone.com" type="email"></li>
