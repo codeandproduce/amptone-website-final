@@ -18,7 +18,7 @@
 .text-input{
 	margin:10px 0;
 	font-size:14px;
-	color:#aeaeae;
+	color:#000000;
 	padding:15px 27px;
 	width:100%;
 	border:none;
@@ -68,11 +68,15 @@ form h4{
 	.contacts-contain h1{
 		font-size:35px;
 	}
-	.email-contact{
-		margin:30px 40px;
-	}
+
 	.email-contact a{
 		margin-top:20px;
+		font-size:14px;
 	}
+}
 
+@media(max-width:300px){
+	.email-contact a{
+		font-size:12px;
+	}
 }
