@@ -3,13 +3,13 @@ $(document).ready(function(){
         interval: 3000
     });
     $('.carousel').carousel('cycle');
-    
+
     $("#navBack").hover(function(){
 		$(".arrow").css("margin-right","5px");
 	},function(){
 		$(".arrow").css("margin-right","15px");
 	});
-	
+
 	$("#toggle").hover(function(){
 		$("#menuText").css("margin-right", "5px");
 		$("#menuText").css("opacity","0.7");
@@ -31,7 +31,7 @@ $(document).ready(function(){
 	});
 
 	docHeight = $(window).height();
-		
+
 	$("#navBar").hover(function(){
 		if($(window).scrollTop() > 0){
 			makeAnimateStuRed();
@@ -56,18 +56,18 @@ $(document).ready(function(){
 		}
 	}
 	});
-	
+
 
 });
 
 
-	
 
 
 
 
 
-	
+
+
 var docHeight;
 $(window).resize(function(){
 	docHeight = $(window).height();
@@ -109,10 +109,10 @@ var isItBottom = false;
 
 
 $(window).scroll(function(){
-	
+
 	var scroll = $(window).scrollTop();
 	var scrollDown = $(window).scrollBottom();
-	
+
 	if (scrollDown == 0){
 		makeAnimateStuRed();
 		isItBottom = true;
@@ -131,7 +131,7 @@ $(window).scroll(function(){
 			makeAnimateStuTransparent();
 		}
 	}
-	
+
 });
 
 function makeAnimateStuWhite(){
@@ -148,7 +148,7 @@ function makeAnimateStuWhite(){
 		$(".icon-bar").animate({
 			backgroundColor: "#000"
 		},{duration:500, queue: false});
-		$(".logoimg").toggleClass("blacklogoimg");		
+		$(".logoimg").toggleClass("blacklogoimg");
 		done = true;
 }
 
@@ -167,7 +167,7 @@ function makeAnimateStuTransparent(){
 		},{duration:500, queue: false});
 		$(".logoimg").removeClass("blacklogoimg");
 		done = false;
-		
+
 }
 
 function makeAnimateStuRed(){
@@ -186,7 +186,27 @@ function makeAnimateStuRed(){
 		$(".logoimg").toggleClass("blacklogoimg");
 }
 
-$.fn.scrollBottom = function() { 
-  return $(document).height() - this.scrollTop() - this.height(); 
+$.fn.scrollBottom = function() {
+  return $(document).height() - this.scrollTop() - this.height();
 };
-	
+
+//socketIO
+var socket = io();
+
+$('#emailform').on('submit', function(e){
+	e.preventDefault();
+	socket.emit('email-request', {
+		email:$('[name=emailInput]').val()
+	});
+});
+
+socket.on('processing', function(){
+	//do this later
+	console.log('called');
+});
+
+
+socket.on('email-success', function(){
+	$('.subscribe-og').css('display', 'none');
+	$('.empty').toggleClass("subscribe-transition subscribe-done");
+});

@@ -75,7 +75,7 @@ button:focus{
 	left:0;
 	bottom:0;
 	border:none;
-	background-color:transparent;	
+	background-color:transparent;
 	z-index:2000;
 }
 
@@ -179,8 +179,33 @@ button:focus{
 	margin-top:10px;
 }
 .wrong{
-	display:none;
+	display: none;
 }
+.empty{
+	position:absolute;
+	visibility: hidden;
+	opacity:0;
+	transition: all ease-in-out 250ms;
+}
+
+.subscribe-transition{
+	visibility: visible;
+	opacity:1;
+}
+
+
+.subscribe-done{
+	position:relative;
+	background-color: white;
+	margin:50px;
+	font-size:32px;
+	padding:20px;
+	color:#dd5e5e;
+}
+.subscribe-done h1{
+	font-size:32px;
+}
+
 
 /* FOLLOW BUTTONS ====================================================== */
 
@@ -209,7 +234,7 @@ button:focus{
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
-    transition: .5s; 
+    transition: .5s;
 }
 .fa-facebook{
 	padding:10px 17px;
