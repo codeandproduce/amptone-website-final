@@ -43,9 +43,14 @@ io.on('connection', (socket) => {
       });
   });
   //contact form
-  socket.on('contact-form-submit', (name, email, subject, message)=>{
+  socket.on('contact-form-submit', (contactMessage)=>{
     socket.emit('contact-form-processing');
-    mailing(name,email,subject,message).then(()=>{
+    mailing(
+      contactMessage.name,
+      contactMessage.email,
+      contactMessage.subject,
+      contactMessage.message
+    ).then(()=>{
       socket.emit('contact-form-success');
     }).catch((error) => {
       socket.emit('contact-form-failure');

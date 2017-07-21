@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-var mailing = (email, name, subject, message) => {
+var mailing = (name, email, subject, message) => {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     secure: false,
@@ -14,17 +14,17 @@ var mailing = (email, name, subject, message) => {
     }
   });
   let HelperOptions = {
-    from: '"Amptone Records" <contactamptone@gmail.com',
+    from: `"${name}" <${email}`,
     to: 'contactamptone@gmail.com',
-    subject: 'Hello world!',
-    text: 'this is working.'
+    subject: subject,
+    text: message
   };
 
   return new Promise((resolve, reject) => {
+    console.log(HelperOptions);
       transporter.sendMail(HelperOptions, (error, info) => {
       if(error){
-        return console.log(error);
-        reject();
+        return reject();
       }
       resolve();
       console.log("The message sent");

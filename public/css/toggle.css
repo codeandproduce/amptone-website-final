@@ -170,9 +170,9 @@ button:focus{
 }
 
 .subscribe-contain ol>li>button:hover{
-	background-color:white;
-	border:none;
-	color:#b61515;
+	background-color:white !important;
+	border:none !important;
+	color:#b61515 !important;
 }
 
 .buttonLI{

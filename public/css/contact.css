@@ -50,9 +50,9 @@ form h4{
 	border:1.5px solid white;
 }
 .submit-button:hover{
-	background-color:white;
-	border: 1.5px solid #dd5e5e;
-	color:#dd5e5e;
+	background-color:white !important;
+	border: 1.5px solid #dd5e5e !important;
+	color:#dd5e5e !important;
 }
 .col-md-4{
 	padding:15px;

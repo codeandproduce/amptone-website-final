@@ -7,6 +7,7 @@ $('#emailContactForm').on('submit', function(e){
     subject: $('[name=subjectInputContact]').val(),
     message: $('[name=messageInputContact]').val()
   });
+
 });
 
 socket.on('contact-form-processing', function(){
@@ -19,5 +20,11 @@ socket.on('contact-form-processing', function(){
 socket.on('contact-form-success', function(){
   $('#emailContactForm').css('display','none');
   $('.contact-empty').toggleClass('contact-done');
-
 });
+socket.on('contact-form-failure', function(){
+  alert('Submission failed.');
+  $('#submitContactFormButton').css('color','white');
+  $('#submitContactFormButton').css('background-color','#dd5e5e');
+  $('#submitContactFormButton').removeAttr('disabled');
+  $('#submitContactFormButton').text('Submit');
+})
