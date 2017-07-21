@@ -30,21 +30,24 @@
 				<h1>Ask us anything!</h1>
 				<div class="row">
 					<div class="col-md-8">
-						<form>
-							<input class="text-input" type="text" placeholder="Your name">
-							<input class="text-input" type="text" placeholder="youremail@amptone.com">
-							<input class="text-input" type="text" placeholder="Why are you contacting us?">
+						<form id="emailContactForm">
+							<input name="nameInputContact" class="text-input" type="text" placeholder="Your name">
+							<input name="emailInputContact" class="text-input" type="text" placeholder="youremail@amptone.com">
+							<input name="subjectInputContact" class="text-input" type="text" placeholder="Why are you contacting us?">
 							<h4>Your message</h4>
-							<textarea rows="6" class="text-input" placeholder="What do you want to say to us?"></textarea>
-							<button class="submit-button">Submit</button>
+							<textarea name="messageInputContact" rows="6" class="text-input" placeholder="What do you want to say to us?"></textarea>
+							<button id="submitContactFormButton" class="submit-button" type="submit">Submit</button>
 						</form>
+						<div class="contact-empty">
+							<h4 style="width:100%;text-align:center">Message was successfully sent.</h4>
+						</div>
 					</div>
 					<div class="col-md-4">
 						<form>
-						<div class="email-contact">
-							<h3>Alternatively, you could contact us through our email!</h3>
-							<a href="mailto:contact@amptonerecords.com">contact@amptonerecords.com</a>
-						</div>
+							<div class="email-contact">
+								<h3>Alternatively, you could contact us through our email!</h3>
+								<a href="mailto:contact@amptonerecords.com">contact@amptonerecords.com</a>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -60,6 +63,7 @@
   integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE="
   crossorigin="anonymous"></script>
   	<script src="scripts/jq.js"></script>
+		<script src="scripts/contact.js"></script>
 
 	</body>
 </html>

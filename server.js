@@ -9,6 +9,7 @@ const socketIO = require('socket.io');
 
 //own modules
 const {addEmailToMailchimp} = require('./utilserver/mailchimp');
+const {mailing} = require('./utilserver/mail');
 //
 
 const port = process.env.PORT || 8000;
@@ -41,6 +42,15 @@ io.on('connection', (socket) => {
         console.log(error);
       });
   });
+  //contact form
+  socket.on('contact-form-submit', (name, email, subject, message)=>{
+    socket.emit('contact-form-processing');
+    mailing(name,email,subject,message).then(()=>{
+      socket.emit('contact-form-success');
+    }).catch((error) => {
+      socket.emit('contact-form-failure');
+    });
+  })
 });
 
 

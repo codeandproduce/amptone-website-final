@@ -80,3 +80,17 @@ form h4{
 		font-size:12px;
 	}
 }
+
+
+.contact-empty{
+	position:absolute;
+	visibility: hidden;
+	opacity:0;
+	transition: all ease-in-out 250ms;
+}
+
+.contact-done{
+	visibility: visible;
+	opacity:1;
+	position:relative;
+}
