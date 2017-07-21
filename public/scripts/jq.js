@@ -201,8 +201,10 @@ $('#emailform').on('submit', function(e){
 });
 
 socket.on('processing', function(){
-	//do this later
-	console.log('called');
+	$('#submitEmail').text('Processing...');
+	$("#submitEmail").css('background-color', 'white');
+	$('#submitEmail').css('color', '#dd5e5e');
+	$('#submitEmail').attr('disabled','disabled');
 });
 
 
@@ -210,3 +212,11 @@ socket.on('email-success', function(){
 	$('.subscribe-og').css('display', 'none');
 	$('.empty').toggleClass("subscribe-transition subscribe-done");
 });
+
+socket.on('email-failure', function(){
+	alert('Could not process request.');
+	$('#submitEmail').removeAttr('disabled');
+	$('#submitEmail').css('background-color', '#dd5e5e');
+	$('#submitEmail').css('color','white');
+	$('#submitEmail').text('SUBMIT');
+})
