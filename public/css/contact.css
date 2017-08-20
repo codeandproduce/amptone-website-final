@@ -11,8 +11,7 @@
 }
 .contacts-contain h1{
 	font-size:50px;
-	color:#4b4b4b;
-	border-bottom: 3px solid #dd5e5e;
+	border-bottom: 3px solid #0D121C;
 	margin-bottom:30px;
 }
 .text-input{
@@ -46,13 +45,13 @@ form h4{
 	width:100%;
 	color:white;
 	border:none;
-	background-color: #dd5e5e;
+	background-color: #0D121C;
 	border:1.5px solid white;
 }
 .submit-button:hover{
 	background-color:white !important;
-	border: 1.5px solid #dd5e5e !important;
-	color:#dd5e5e !important;
+	border: 1.5px solid #0D121C !important;
+	color:#0D121C !important;
 }
 .col-md-4{
 	padding:15px;

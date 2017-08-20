@@ -38,8 +38,10 @@ io.on('connection', (socket) => {
         addEmailToMailchimp(useremail.email).then(()=>{
         socket.emit('email-success');
       }).catch((error)=>{
-        socket.emit('email-failure');
         console.log(error);
+        socket.emit('email-failure',{
+          type: error
+        });
       });
   });
   //contact form
@@ -57,9 +59,6 @@ io.on('connection', (socket) => {
     });
   })
 });
-
-
-
 app.get('/', (req, res) => {
   res.render('index.hbs',{
     athome: true

@@ -16,13 +16,13 @@ body{
 	background-color:white;
 }
 .tint {
-    z-index: 5;
-    position:absolute;
-    top:0;
+  z-index: 5;
+  position:absolute;
+  top:0;
 	height:100%;
 	width:100%;
-	background: #b61515;
-	opacity:0.6;  
+	background: #0D121C;
+	opacity:0.6;
 }
 
 #navBar{
@@ -45,7 +45,9 @@ body{
 	height:70px;
 	overflow:hidden;
 }
-
+#logoimg{
+	filter:invert(100%) !important;
+}
 .blacklogoimg{
 	filter:invert(0%);
 	transition: all ease-in-out 500ms;
@@ -61,41 +63,29 @@ body{
 	position:fixed;
 	height:110px;
 }
-
-
 .icon-bar{
 	background-color:white;
 }
-
-
 .navbar-toggle{
 	transform: scale(1.8, 1.8);
 	display: block;
 	margin-top:18px;
 }
-
-
-.navbar-toggle 
+.navbar-toggle
 ul.nav li a.active{
 	font-weight:bold;
 }
-
 .navbar-header {
     float: none;
 }
-
 .navbar-collapse {
 	border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 }
- 
- 
 .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
-
 #menuText{
 	color:white;
 	font-size:20px;
@@ -128,5 +118,3 @@ ul.nav li a.active{
 		display:none;
 	}
 }
-
-

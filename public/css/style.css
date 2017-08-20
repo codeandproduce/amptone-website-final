@@ -91,7 +91,7 @@ ul.nav li a{
 	font-size:15px;
 }
 
-ul.nav li a:focus,    
+ul.nav li a:focus,
 ul.nav li a:hover{
 	background-color:transparent;
 	font-weight:bold;
@@ -108,18 +108,11 @@ ul.nav li a:hover{
 
 .bun:focus,
 .bun:hover{
-	background-color:#dd5e5e;
-	border:1px solid #dd5e5e;
-	color:white;
+	background-color:white;
+	border:1px solid white;
+	color:#0D121C;
 }
 
 .reverse{
 	color:black
 }
-
-
-
-
-
-
-

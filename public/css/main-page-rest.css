@@ -1,7 +1,7 @@
 .row{
 	margin: auto;
 	padding:0;
-	
+
 }
 .containContent{
 	margin-bottom:50px;
@@ -16,7 +16,7 @@
 	border-radius: 5px;
 	padding-bottom: 3px;
 	font-size:50px;
-	
+
 }
 .release-container{
 	margin:auto;
@@ -30,7 +30,7 @@
 	width:100%;
 	height:auto;
 	margin:auto;
-	
+
 }
 .standard-title{
 	font-size:20px;
@@ -88,7 +88,7 @@
 	.content h1{
 		font-size:9vw;
 	}
-	
+
 }
 #third-col{
 		margin-bottom:10px;
@@ -98,24 +98,24 @@
 /*RELEASE BUTTONS*/
 .standard-extend{
 	background:none;
-	border: 2px solid rgba(120, 120, 120, 0.8);
+	border: 2px solid #0D121C;
 	padding:11px;
 	padding-left: 50px;
 	padding-right:50px;
-	color: rgba(120,120,120,1);
+	color: #0D121C;
 	font-size:20px;
 	margin-top:10px;
 	margin-bottom:5vh;
 }
 .standard-extend:hover{
-	border: 2px solid #dd5e5e;
-	background-color:#dd5e5e;
+	border: 2px solid #0D121C;
+	background-color:#0D121C;
 	color:white;
 }
 
 .click-more-standard{
-	border: 2px solid #dd5e5e;
-	background-color:#dd5e5e;
+	border: 2px solid #0D121C;
+	background-color:#0D121C;
 	color:white;
 	padding:11px;
 	padding-left: 50px;
@@ -125,8 +125,8 @@
 
 .click-more-standard:hover{
 	background:none;
-	border: 2px solid rgba(120, 120, 120, 0.8);
-	color: rgba(120,120,120,1);
+	border: 2px solid #0D121C;
+	color: #0D121C;
 }
 
 
@@ -138,4 +138,3 @@
 .event-date{
 	font-size:16px;
 }
-

@@ -24,6 +24,10 @@ var addEmailToMailchimp = (email) => {
         console.log("didnt work");
         reject('error');
       }
+      if(body.title == 'Member Exists'){
+        reject('member exists');
+        console.log('member exists');
+      }
       resolve();
       console.log(body);
     });

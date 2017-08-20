@@ -27,11 +27,9 @@ $(document).ready(function(){
 		$("#menuText").css("margin-right", "15px");
 		$("#menuText").css("opacity","1.0");
 		$("#toggle").css("opacity","1.0");
-
 	});
 
 	docHeight = $(window).height();
-
 	$("#navBar").hover(function(){
 		if($(window).scrollTop() > 0){
 			makeAnimateStuRed();
@@ -59,15 +57,6 @@ $(document).ready(function(){
 
 
 });
-
-
-
-
-
-
-
-
-
 var docHeight;
 $(window).resize(function(){
 	docHeight = $(window).height();
@@ -91,7 +80,6 @@ function bringNavUp(){
 	$("body").addClass("noscroll");
 	$("#toggleNav").css("z-index",107);
 }
-
 $("#navBack").click(function(){
 	var top1 = docHeight*2;
 	console.log(top1);
@@ -109,10 +97,8 @@ var isItBottom = false;
 
 
 $(window).scroll(function(){
-
 	var scroll = $(window).scrollTop();
 	var scrollDown = $(window).scrollBottom();
-
 	if (scrollDown == 0){
 		makeAnimateStuRed();
 		isItBottom = true;
@@ -167,12 +153,11 @@ function makeAnimateStuTransparent(){
 		},{duration:500, queue: false});
 		$(".logoimg").removeClass("blacklogoimg");
 		done = false;
-
 }
 
 function makeAnimateStuRed(){
 	$("#animateStu").animate({
-			backgroundColor: "#dd5e5e"
+			backgroundColor: "#0D121C"
 		},{duration:500, queue: false});
 		$("#navBar").children().children().animate({
 			color: "#FFF"
@@ -213,10 +198,15 @@ socket.on('email-success', function(){
 	$('.empty').toggleClass("subscribe-transition subscribe-done");
 });
 
-socket.on('email-failure', function(){
-	alert('Could not process request.');
+socket.on('email-failure', function(doc){
+	if(doc.type == 'member exists'){
+		alert('You are already subscribed!');
+	}else{
+		alert('Could not process request.');
+	}
 	$('#submitEmail').removeAttr('disabled');
-	$('#submitEmail').css('background-color', '#dd5e5e');
+	$('#submitEmail').css('background', 'none');
+	$('#submitEmail').css('border','1px solid white')
 	$('#submitEmail').css('color','white');
 	$('#submitEmail').text('SUBMIT');
 })
