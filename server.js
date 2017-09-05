@@ -57,7 +57,7 @@ io.on('connection', (socket) => {
     }).catch((error) => {
       socket.emit('contact-form-failure');
     });
-  })
+  });
 });
 app.get('/', (req, res) => {
   res.render('index.hbs',{

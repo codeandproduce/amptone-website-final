@@ -27,4 +27,4 @@ socket.on('contact-form-failure', function(){
   $('#submitContactFormButton').css('background-color','#dd5e5e');
   $('#submitContactFormButton').removeAttr('disabled');
   $('#submitContactFormButton').text('Submit');
-})
+});
