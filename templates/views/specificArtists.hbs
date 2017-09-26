@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amptone Records: Ray Tsao</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8"/>
+		<meta name="description" content="Official website for Amptone Records! Amptone records is a Shanghai-based record label."/>
+		<meta name="copyright" content="Chan Woo Kim">
+		<meta name="author" content="Chan Woo Kim"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/shared.css">
+		<link rel="stylesheet" href="/css/standard.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/toggle.css">
+		<link rel="stylesheet" href="/css/main-page-rest.css">
+    <link rel="stylesheet" href="/css/specific-artists-style.css" />
+    <script src="/scripts/soundcloud-api.js"></script>
+  </head>
+  <body>
+    {{>nav}}
+    <script>
+      var oneOfThoseNotFancyPages = true;
+    </script>
+    <style>
+
+    </style>
+    <div class="contain">
+      <div class="first-display-contain">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contain-artist-info">
+              <h1 class="artist-name-display-heading">{{data.artists.name}}</h1>
+              <p class="artist-description-display">
+                {{data.artists.artistDescription}}
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img class="artist-full-image" src="{{data.artists.secondimage}}" />
+          </div>
+        </div>
+      </div>
+      <div class="featured-song-contain">
+        <h1 class="featured-song-label">Featured song</h1>
+        <div class="contain-featured-song">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="featured-song-specific-artist-image" src="images/17.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="contain-specific-artist-featured-song">
+                <h3 class="specific-artist-featured-song-name">
+                  {{data.artists.featuredSongName}}
+                </h3>
+                <p class="featured-song-album">
+                  <i>{{data.artists.featuredSongAlbumName}}</i>
+                </p>
+                <p class="featured-song-description">
+                  {{data.artists.featuredSongDescription}}
+                </p>
+                <a class="featured-song-link" href="{{data.artists.featuredSongLink}}">
+                  <span>Listen</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="albums-contain">
+        <h1 class="albums-contain-label">Albums</h1>
+        {{#each data.artists.albumSoundcloudLinks}}
+          {{console data.artists.featuredSongLink}}
+          <div class="one-album">
+            <div class="row">
+              <div class="col-md-5">
+                <iframe class="iframe" height="465" scrolling="no" frameborder="no"
+                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/theofficialraypage/sets/validated">
+                </iframe>
+              </div>
+              <div class="col-md-7">
+                <div class="contain-specific-artist-featured-song">
+                  <h3 class="specific-artist-featured-song-name album-name">
+                    Validated
+                  </h3>
+                  <p class="featured-song-album album-date">
+                    <i>9/21/2017</i>
+                  </p>
+                  <p class="featured-song-description album-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    {{>footer}}
+    <script src="/scripts/jquery-3.2.1.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+    <script
+src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"
+integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE="
+crossorigin="anonymous"></script>
+    <script src="/scripts/jq.js"></script>
+  </body>
+</html>

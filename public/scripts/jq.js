@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	if(oneOfThoseNotFancyPages){
+		makeAnimateStuWhite();
+	}
 	$('.carousel').carousel({
         interval: 3000
     });
@@ -31,11 +34,11 @@ $(document).ready(function(){
 
 	docHeight = $(window).height();
 	$("#navBar").hover(function(){
-		if($(window).scrollTop() > 0){
+		if($(window).scrollTop() > 0 && !oneOfThoseNotFancyPages){
 			makeAnimateStuRed();
 		}
 	},function(){
-		if(!isItBottom){
+		if(!isItBottom && !oneOfThoseNotFancyPages){
 			if($(window).scrollTop() > 0){
 			$("#animateStu").animate({
 				backgroundColor: "#FFF",
@@ -97,26 +100,30 @@ var isItBottom = false;
 
 
 $(window).scroll(function(){
-	var scroll = $(window).scrollTop();
-	var scrollDown = $(window).scrollBottom();
-	if (scrollDown == 0){
-		makeAnimateStuRed();
-		isItBottom = true;
-	}else{
-		if(isItBottom){
-			makeAnimateStuWhite();
-			isItBottom = false;
-		}
-	}
-	if (!isItBottom){
-		if(scroll > 0){
-			if(!done){
-				makeAnimateStuWhite();
-			}
+
+
+
+		var scroll = $(window).scrollTop();
+		var scrollDown = $(window).scrollBottom();
+		if (scrollDown == 0){
+			makeAnimateStuRed();
+			isItBottom = true;
 		}else{
-			makeAnimateStuTransparent();
+			if(isItBottom){
+				makeAnimateStuWhite();
+				isItBottom = false;
+			}
 		}
-	}
+		if (!isItBottom && !oneOfThoseNotFancyPages){
+			if(scroll > 0){
+				if(!done){
+					makeAnimateStuWhite();
+				}
+			}else{
+				makeAnimateStuTransparent();
+			}
+		}
+
 
 });
 

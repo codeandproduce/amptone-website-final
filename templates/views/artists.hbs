@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Artists - Amptone Records</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Official website for Amptone Records! Amptone records is a Shanghai-based record label."/>
+		<meta name="copyright" content="Chan Woo Kim">
+		<meta name="author" content="Chan Woo Kim"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/shared.css">
+		<link rel="stylesheet" href="css/toggle.css">
+		<link rel="stylesheet" href="css/standard.css">
+		<link rel="stylesheet" href="css/artist.css">
+  </head>
+
+
+  <body>
+    {{> nav}}
+    <div class="menu-background" style="background-image:url('img/sample/sample5.jpg')">
+			<h1>Artists</h1>
+			<div class="tint"></div>
+			<!--specific to artists-->
+			<div class="background-artist-info">
+				<h5>King Ray</h5>
+				<p>Validated</p>
+			</div>
+		</div>
+    <div class="artist-content">
+			<div class="container">
+				<div class="row">
+          {{#each artists}}
+  					<div class="col-md-6 aritst-column">
+  						<div style="background-image: url('{{firstimage}}')" id="1-artist" class="artist-block">
+  							<a href="/artists/{{slug}}"><span></span></a>
+  							<div class="tint"></div>
+  							<h5>{{name}}</h5>
+  						</div>
+            </div>
+          {{/each}}
+				</div>
+			</div>
+		</div>
+    {{> footer}}
+    <script src="scripts/jquery-3.2.1.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script
+  src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"
+  integrity="sha256-Wp3wC/dKYQ/dCOUD7VUXXp4neLI5t0uUEF1pg0dFnAE="
+  crossorigin="anonymous"></script>
+  		<script src="scripts/jq.js"></script>
+  		<script src="scripts/artists-jq.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<div id="navBar">
+			<div class="container">
+				<img class="logoimg"src="/img/logo.png">
+				<button id="toggle" class="navbar-toggle" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" id="menuText">Menu</a>
+			</div>
+		</div>
+		<div id="toggleNav">
+			<div class="togggle-content">
+				<div class="toggle-back">
+
+					<button id="navBack"><img src="/img/arrow.png" class="arrow"></img><p>BACK</p></button>
+				</div>
+				<div class="toggle-navigation col-md-6">
+					<div class="toggle-title">
+						<h1>NAVIGATION</h1>
+						<div class="line"></div>
+					</div>
+					<div class="navigation-content">
+						<ol>
+							<li><a class="{{#if athome}}active{{/if}}" href="/">HOME</a></li>
+							<li><a class="{{#if atartist}}active{{/if}}" href="/artists">ARTISTS</a></li>
+							<li><a class="{{#if atrelease}}active{{/if}}" href="/releases">RELEASES</a></li>
+							<li><a class="{{#if atevent}}active{{/if}}" href="/events">EVENTS</a></li>
+							<li><a href="#">MERCH</a></li>
+							<li><a class="{{#if atcontact}}active{{/if}} "href="/contact">CONTACT</a></li>
+						</uo>
+					</div>
+				</div>
+				<div class="toggle-subscribe col-md-6">
+					<div class="toggle-title">
+						<h1>SUBSCRIBE</h1>
+						<div class="line"></div>
+					</div>
+
+					<div class="subscribe-contain">
+						<div class="empty">
+							<h1>You have been subscribed!</h1>
+						</div>
+					</div>
+					<form id="emailform" class="subscribe-contain subscribe-og">
+						<ol>
+							<li><p>Subscribe to be the first to know for new releases and events. <span class="wrong">Please fill out the correct information</span></p></li>
+							<li><input name="emailInput" id="emailInput" placeholder="myemail@amptone.com" type="email"></li>
+							<li class="termsLI"><a href="#">TERMS</a></li>
+							<li class="buttonLI"><button id="submitEmail" type="submit">SUBMIT</button></li>
+						</ol>
+					</form>
+
+				</div>
+				<div class="toggle-follow col-md-6">
+					<div class="toggle-title">
+						<h1>FOLLOW US</h1>
+						<div class="line"></div>
+					</div>
+					<div class="follow-contain">
+						<ol>
+							<li><a href="#" class="aicon"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="aicon"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#" class="aicon"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#" class="aicon"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="aicon"><i class="fa fa-snapchat-ghost"></i></a></li>
+							<li><a href="#" class="aicon"><i class="fa fa-soundcloud"></i></a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="animateStu">
+		</div>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script src="./scripts/build.js"></script>

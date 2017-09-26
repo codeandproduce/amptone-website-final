@@ -1,6 +1,0 @@
-# amptone-website-final
-The website is now deployed to heorku. I used Node.js and Express.js in order to integrate what I've written previously for the website to a server and deploy it.
-
-The website is updated day by day as I work on it in the following link: https://amptone.herokuapp.com/
-
-If the page in the link above does not function properly, try this link: http://amptone.000webhostapp.com/
